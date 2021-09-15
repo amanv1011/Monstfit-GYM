@@ -1,0 +1,72 @@
+.left img{
+    width:48% ;
+}
+
+.left a{
+    width: 41%;
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    /* border: 2px solid red; */
+    /* color: white; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* left: 0px; */
+    top: 10px;
+}
+
+
+.right{
+
+    position: revert;
+    display: flex;
+    flex-direction: column;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 17px 1px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: left;
+}
+
+
+.navbar ul{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.navbar li a {
+    padding: 7px 3px;
+    margin: 0px 4px;
+    font-size: .5rem;
+    border: 2px solid;
+}
+
+
+.btn{
+    margin: 5px 10px;
+    padding: 5px 5px;
+}
+
+.btn2{
+    width: 54%;
+    margin: 12px auto;
+}
+
+.container {
+    /* border: 2px solid white; */
+    width: 95%;
+    margin: 97px auto;
+}
