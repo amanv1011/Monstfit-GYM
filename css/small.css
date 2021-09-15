@@ -9,12 +9,11 @@
 }
 
 .left {
-    /* border: 2px solid red; */
-    /* color: white; */
+    
     display: flex;
     justify-content: center;
-    position: relative;
-    /* left: 0px; */
+    position: sticky;
+   
     top: 10px;
 }
 
