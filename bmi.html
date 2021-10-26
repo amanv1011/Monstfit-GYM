@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background:linear-gradient(white,black) ;
+            height: 100vh;
+            font-family: 'Carter One', cursive;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            border-radius: 12px;
+            padding: 10px;
+            width: 60px;
+        }
+        h3{
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 20px;
+            
+        }
+        button:hover{
+            color: black;
+            background-color: aliceblue;
+        }
+        .bmi{
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculate Your BMI(body mass index):-</h1>  
+        <div>
+            <h3>Enter your weight in 'lbs' : <input type="number" name="weight" id="weight"></h3> 
+        </div>
+        <div>
+            <h3 >Enter Your height in 'inch' : <input type="number" name="height" id="height"></h3> 
+        </div>
+        <button id="btn">Calculate</button><br>
+        <div class="bmi" id="bmi">
+           
+        </div>
+    </div>
+    <script>
+        let btn = document.getElementById('btn')
+
+        btn.addEventListener("click", ()=>{
+            let weight = (document.getElementById("weight").value)
+            let height = (document.getElementById("height").value)
+            let bmi = weight/(height*height)*703
+            bmi = bmi.toFixed(2)
+            console.log(weight, height);
+            document.getElementById("bmi").innerHTML = `<h3>Your BMI is : ${bmi}  </h3>
+                                                      ${bmi>25? `<h3 style="color: red;">You are OVERWEIGHT</h3>`: bmi<19? `<h3 style="color: yellow;">You are UNDERWEIGHT</h3>`:  `<h3 style="color: green;">Your BMI is NORMAL</h3>`} `
+            weight.value = ""
+            height.value = ""
+            
+        })
+
+    </script>
+</body>
+</html>
